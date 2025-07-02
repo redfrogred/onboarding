@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import './Onboarding_Page.dart';
+
+//  adapted from:
+//  https://www.youtube.com/watch?v=AmsXazhGMQ0
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +14,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    //  chrome color
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      systemNavigationBarColor: Colors.black, // Change this to your desired color
+      systemNavigationBarIconBrightness: Brightness.light, // Light icons on dark background
+    ));
+    
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
