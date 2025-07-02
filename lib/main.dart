@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './Onboarding_Page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,6 +59,17 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0,20,0,0),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Onboarding_Page()),
+            );              
+                }, 
+                child: Text('next ->')),
+            )
           ],
         ),
       ),
